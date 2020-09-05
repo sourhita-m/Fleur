@@ -1,0 +1,452 @@
+<!DOCTYPE HTML5>
+<html lang="en">
+<head> 
+<title>  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+html {
+  scroll-behavior: smooth
+} 
+body { 
+    font-family: Open Sans;
+    }
+.header {
+  padding: 80px; /* some padding */
+  text-align: center; /* center the text */
+  background: rgb(69, 123, 157);
+  background: linear-gradient(45deg, rgba(69, 123, 157,1) 0%, rgba(168, 218, 220,1) 48%, rgba(241, 250, 238,1) 100%);
+  background-size: contain;
+  background-repeat: none;
+  color: #E63946; /* text color */
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 60px;
+} 
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 98.99%; /* Dark background color */
+  z-index: 999;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: #E5E4E2; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+.banner {
+  padding: 40px; /* some padding */
+  text-align: left; 
+  background: #F1FAEE; /*background color*/
+  color: #1D3557;
+  overflow: hidden;
+  
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  z-index: 1;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 25px;}
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Roboto, sans-serif;}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: roboto;
+}
+.storybox{
+  display: flex; flex-direction: row;
+  text-align: justify;
+}
+.storyphoto{
+  flex-basis: 30%; margin-right: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<section id="header">
+  <div class="header">
+    <h1> Fleur </h1>
+  </div>
+
+
+<div class="navbar">
+  
+    <a href="index.html"> Home </a>
+    <a href="#story"> About </a>
+    <a href="#values"> Values </a>
+    <a href="#services"> Services </a>
+    <a href="#contact" class="right"> Get in Touch </a>
+  
+</div>
+</section>
+
+<section id="story">
+  <div class="banner">
+    <div class="row">
+      <h1> <center> Our Story </center> </h1>
+    </div>
+   </div>
+   <div class="storybox">
+      <div class="storyphoto">
+        <img src="researcher.jpg" alt="Researcher" style="width: 100%; height: 100%;">
+      </div>
+      <p style="flex-basis: 65%;"> 
+        Hi, there! If you are on this website, you have probably interacted with the app already. Let me know if you like it or not in the 'Get in Touch' section. Your feedback is most welcome and always appreciated. 
+        I am Sourhita Majumder, a student of University of Nottingham. For my MSc project in Human Computer Introduction I decided to build an interactive prototype of an android app called Fleur. Fleur in French means flower. I am Asian-Indian by birth, in our culture the flower lotus is of great significance. A lotus represents enlightment. Fleur is a personal project for me. Getting diagnosed with something, is the first step. We need a supportive hand after that, to tell us it's alright and that you're not alone. I wanted to do something that would help other women.
+        <br>
+        <br>
+        <br>
+         I took up this project with this belief in mind. To the numerous women I have spoken talked about their different experiences but also shared experiences. So many women have PCOS, but we do not talk about it enough, there is not enough research, we still do not know what's the genesis of PCOS. Fleur aims to educate, inform and create a dialogue around PCOS. There's a societal stigma around PCOS, especially in India. A lot of people think it is solely a reproductive disorder and the name itself, Polycystic Ovary Syndrome, is misleading. PCOS also previously known as PCOD (Polycystic Ovary Disease) and Stein-Leventhal Syndrome is an endocrine system disorder. Ovarian cysts can be a symptom, but a lot of women who don't have cysts on their ovaries can also have PCOS. As an aspiring UX/UI Designer I conducted User Experience Research in the form of survey (N=43) and semi-structured interview (N=15) and an expert interview with a practicing gynaecologist. The interview sessions especially were very informative. It turned out to be therapeutic for me, listening to the challenges, struggles, judgemnts they faced and still came out strong and successful. The final prototype was designed after generating requirements from the survey, interview and participatory design. Not all the requirements could be implemented, the proritised ones were implemented. Fleur aims to become something tangible in the future, so that women can truly benefit from it.   
+        My supervisor, Dr. Alexander Lang, was there to guide me and support me through out the project. Her insights were invaluable and has helped me at every stage of the project. 
+      </p>
+    </div>
+</section>
+<br>
+<br>
+<section id="values">
+  <div class="banner">
+    <div class="row">
+      <h1> <center> Our Values </center> </h1>
+    </div>
+   </div>
+<br>
+<br>
+<section id="caraousel">
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="creativity.jpg" style="width:100%";>
+    <div class="text">Creativity</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="honesty.jpg" style="width:100%">
+    <div class="text">Honesty</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="compassion.jpg" style="width:100%">
+    <div class="text">Compassion</div>
+  </div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</section>
+</section>
+<br>
+<br>
+<section id="services">
+  <div class="banner">
+    <div class="row">
+      <h1> <center> Our Services </center> </h1>
+    </div>
+   </div>
+<div class="row">
+  <div class="column">
+     <div class="card">
+      <img src="Blogger.png" alt="Blog" style="width:100%">
+      <h1> Blog </h1>
+      <p> The blog aims to provide reliable, accessible information on PCOS. The blog section will contain articles on PCOS nutrition, PCOS lifestyle changes and mental well being. The blog wants answer all the questions, a women with PCOS might have.  </p>
+    </div>
+  </div>
+  <div class="column">
+   <div class="card">
+    <img src="Mentalhealth.png" alt="My Support" style="width:100%">
+    <h1> My Support </h1>
+    <p> The support group is a safe space for women with PCOS to share their experiences and challenges. You can talk to friend who will understand what you're going through without judgement. Women can learn from each other's experience, empower each other and create a sense of community. </p>
+  </div>
+</div>
+  <div class="column">
+    <div class="card">
+      <img src="Period.png" alt="Period Tracker" style="width:100%">
+      <h1> Period Tracker </h1>
+      <p> The period tracker allows the user to track their predicted period day and predicted fertility window. It also lets you record your period details like flow, symptom and spotting.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="Doctor.png" alt="Gynecologist" style="width:100%">
+      <h1> Consultation </h1>
+      <p> The Consultation allows the user to have access to medical professionals like gynecologists, nutritionists and psychologists. They can book appointments by video call or clinic visit. </p>
+    </div>
+  </div>
+</div>
+</section>
+<br>
+<br>
+<section id="contact">
+<div class="container">
+  <form method="get" autocomplete="on">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Email</label>
+      </div>
+    <div class="col-75">
+        <input type="text" id="email" name="email" placeholder="Your email ID..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <p>
+    <div class="row">
+      <input type="submit" onclick="show_alert()" value="Submit">
+    </div>
+  </form>
+</div>
+</p>
+</section>
+
+<script>
+  var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+function show_alert() {
+    if(document.getElementById('fname').value ==""){
+      alert("Please fill out all the fields in the form.");
+      return false;
+    } 
+     if(document.getElementById('lname').value == ""){
+      alert("Please fill out all the fields in the form.");
+      return false;
+    }
+    if(document.getElementById('email').value ==""){
+      alert("Please fill out all the fields in the form.");
+      return false;
+    }
+    if(document.getElementById('subject').value ==""){
+      alert("Please fill out all the fields in the form.");
+      return false;
+    }
+    else {
+        alert("Your form is submitted.")
+    }
+
+  }
+
+</script>
+</body>
+</html>
